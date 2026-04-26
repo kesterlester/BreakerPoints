@@ -50,3 +50,8 @@ pip install -r requirements.txt
 python breaker_points.py examples/sample_breaker.png
 ```
 
+## See also example data:
+
+https://docs.google.com/spreadsheets/d/14H9yaAH8xREWJ71rreWgcpF8mjq-DGHhI8DOZ1dkf-s/edit?usp=sharing
+
+
