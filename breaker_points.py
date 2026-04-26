@@ -64,10 +64,10 @@ def onclick(event):
 
     ax.plot(event.xdata, event.ydata, 'ro')
     ax.text(event.xdata, event.ydata, POINT_NAMES[idx][0], color='red')
-    fig.canvas.draw()
 
     if len(clicked) < len(POINT_NAMES):
         ax.set_title(f"Click: {POINT_NAMES[len(clicked)]}")
+        fig.canvas.draw()
     else:
         plt.close()
 
