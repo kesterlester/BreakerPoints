@@ -29,22 +29,15 @@ python breaker_points.py image.png [output.csv]
 ## Example usage:
 For this input
 ```bash
-python breaker_points.py examples/sample_breaker.png
+python breaker_points.py examples/default.png
 ```
 
 expect approximately this output:
 
 ```bash
-point,x_mm,y_mm
-a_upper_din,-0.0,35.0
-b_lower_din,-0.0,-0.0
-c_upper_opening,41.221,38.45
-d_lower_opening,40.285,-3.339
-e_max_upper,21.292,55.995
-f_max_forward,66.106,8.498
-g_max_lower,20.212,-19.819
+a_upper_din_x_mm,a_upper_din_y_mm,b_lower_din_x_mm,b_lower_din_y_mm,c_upper_opening_x_mm,c_upper_opening_y_mm,d_lower_opening_x_mm,d_lower_opening_y_mm,e_max_upper_y_mm,f_max_forward_x_mm,g_max_lower_y_mm
+-0.0,35.0,0.0,0.0,43.817,41.412,45.019,-3.874,60.916,64.256,-32.996
 ```
-
 
 ## Install
 
