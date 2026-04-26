@@ -28,7 +28,7 @@ Click order:
 ## Install
 
 ```bash
-git clone https://github.com/you/BreakerPoints.git
+git clone https://github.com/kesterlester/BreakerPoints.git
 cd BreakerPoints
 python3 -m venv venv
 source venv/bin/activate
