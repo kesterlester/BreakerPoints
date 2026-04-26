@@ -102,11 +102,13 @@ header_row = []
 data_row = []
 
 for name, (x, y) in zip(POINT_NAMES, result):
-    header_row.append(name + "_x_mm")
-    header_row.append(name + "_y_mm")
-    data_row.append(round(x,3))
-    data_row.append(round(y,3))
-    #rows.append([name, round(x, 3), round(y, 3)])
+    if not ("max_upper" in name or "max_lower" in name):
+        header_row.append(name + "_x_mm")
+        data_row.append(round(x, 3))
+
+    if not ("max_forward" in name):
+        header_row.append(name + "_y_mm")
+        data_row.append(round(y,3))
 
 if outfile:
     with open(outfile, "w", newline="") as f:
