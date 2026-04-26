@@ -98,16 +98,23 @@ if len(clicked) != 7:
 
 result = canonical_transform(clicked)
 
-rows = []
+header_row = []
+data_row = []
+
 for name, (x, y) in zip(POINT_NAMES, result):
-    rows.append([name, round(x, 3), round(y, 3)])
+    header_row.append(name + "_x_mm")
+    header_row.append(name + "_y_mm")
+    data_row.append(round(x,3))
+    data_row.append(round(y,3))
+    #rows.append([name, round(x, 3), round(y, 3)])
 
 if outfile:
     with open(outfile, "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["point", "x_mm", "y_mm"])
-        w.writerows(rows)
+        #w.writerow(["point", "x_mm", "y_mm"])
+        #w.writerows(rows)
+        w.writewrow(header_row)
+        w.writewrow(data_row)
 else:
-    print("point,x_mm,y_mm")
-    for row in rows:
+    for row in [header_row, data_row]:
         print(",".join(map(str, row)))
