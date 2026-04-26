@@ -6,6 +6,8 @@ import math
 from PIL import Image
 import matplotlib.pyplot as plt
 
+DIN_size_mm = 35
+
 POINT_NAMES = [
     "a_upper_din",
     "b_lower_din",
@@ -41,10 +43,10 @@ def canonical_transform(points):
         yr = x * s + y * c
         rotated.append((xr, yr))
 
-    # scale to 35 mm DIN height
+    # scale to DIN height
     axr, ayr = rotated[0]
     length = math.hypot(axr, ayr)
-    scale = 35.0 / length
+    scale = DIN_size_mm / length
 
     scaled = [(x * scale, y * scale) for x, y in rotated]
 
