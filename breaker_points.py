@@ -80,6 +80,8 @@ imagefile = sys.argv[1]
 outfile = sys.argv[2] if len(sys.argv) > 2 else None
 
 img = Image.open(imagefile)
+if img.mode not in ("RGB", "RGBA"):
+    img = img.convert("RGB")
 
 fig, ax = plt.subplots()
 ax.imshow(img)
