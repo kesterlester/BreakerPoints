@@ -31,6 +31,6 @@ cd BreakerPoints
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python breaker_points.py examples/sample_breaker.jpg
+python breaker_points.py examples/sample_breaker.png
 ```
 
