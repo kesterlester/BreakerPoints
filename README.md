@@ -27,8 +27,14 @@ python breaker_points.py image.png [output.csv]
 * max lower point
 
 ## Example usage:
+For this input
 ```bash
 python breaker_points.py examples/sample_breaker.png
+```
+
+expect approximately this output:
+
+```bash
 point,x_mm,y_mm
 a_upper_din,-0.0,35.0
 b_lower_din,-0.0,-0.0
