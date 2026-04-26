@@ -11,7 +11,8 @@ pip install -r requirements.txt
 
 ## Usage
 
-```python breaker_points.py image.jpg output.csv
+```bash
+python breaker_points.py image.jpg output.csv
 ```
 
 Click order:
@@ -26,7 +27,8 @@ Click order:
 
 ## Install
 
-```git clone https://github.com/you/BreakerPoints.git
+```bash
+git clone https://github.com/you/BreakerPoints.git
 cd BreakerPoints
 python3 -m venv venv
 source venv/bin/activate
